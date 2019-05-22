@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Главная страница</title>
+		<link rel="stylesheet" href="css/bootstrap-reboot.css">
+		<link rel="stylesheet" href="css/bootstrap-grid.css">
+		<link rel="stylesheet" href="js/vendor/chosen/chosen.min.css">
+		<link rel="stylesheet" href="css/main.css">
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header">
+				<div class="header__top">
+					<div class="container">
+						<div class="row align-items-center">
+							<div class="col-4">
+								<a href="/"><img src="img/logo.png" alt="" class="logo-site"></a>
+							</div>
+			
+							<div class="col-4">
+								<div class="header__contact">
+									<a href="tel:+78005005059" class="header__phone">8-800-500-50-59</a>
+									<div class="header__address">г. Москва, ул. Скобелева, 15</div>
+								</div>
+							</div>
+			
+							<div class="col-4">
+								<div class="header__city">
+									<div class="select-green">
+										<select class="js-select" class="select-green">
+											<option value="Санкт-Петербург">Санкт-Петербург</option>
+											<option value="Москва">Москва</option>
+											<option value="Брянск">Брянск</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			
+				<div class="header-menu">
+					<div class="container">
+						<div class="row">
+							<div class="col-4">
+								<div class="header-menu__item">
+									<img src="img/ic-auction.png" alt="" class="header-menu__img">
+			
+									<div class="header-menu__content">
+										<div class="header-menu__head">Как проходят торги</div>
+										<div class="header-menu__text">До 95% выплачивается сразу</div>
+									</div>
+			
+									<a href="#" class="header-menu__arr"></a>
+								</div>
+							</div>
+			
+							<div class="col-4">
+								<div class="header-menu__item">
+									<img src="img/ic-calc.png" alt="" class="header-menu__img">
+			
+									<div class="header-menu__content">
+										<div class="header-menu__head">Как осуществляется комиссионная продажа</div>
+										<div class="header-menu__text">Вся сумма выплачивается после продажи</div>
+									</div>
+			
+									<a href="#" class="header-menu__arr"></a>
+								</div>
+							</div>
+			
+							<div class="col-4">
+								<div class="header-menu__item">
+									<img src="img/ic-loupe.png" alt="" class="header-menu__img">
+			
+									<div class="header-menu__content">
+										<div class="header-menu__head">Онлайн оценка</div>
+									</div>
+			
+									<a href="#" class="header-menu__arr"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+			
+			<main>
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<form method="get" class="form-site">
+								<input type="text" placeholder="Поиск лота">
+			
+								<select data-placeholder="Категория" class="js-select" class="select-green">
+									<option value=""></option>
+									<option value="Бытовая техника">Бытовая техника</option>
+									<option value="Серебро">Серебро</option>
+									<option value="Золото">Золото</option>
+								</select>
+			
+								<select data-placeholder="Город" class="js-select" class="select-green">
+									<option value=""></option>
+									<option value="Санкт-Петербург">Санкт-Петербург</option>
+									<option value="Москва">Москва</option>
+									<option value="Брянск">Брянск</option>
+								</select>
+			
+								<input type="submit" value="Найти" class="btn btn--search">
+							</form>
+						</div>
+					</div>
+				</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<p><a href="index.html">Главная страница</a></p>
+						<p><a href="index.html">Типографика</a></p>
+					</div>
+				</div>
+			</div>
+			</main>
+			
+			<footer class="footer">
+				<div class="container">
+					<div class="row">
+						<div class="col-4">
+							<a href="/"><img src="img/logo.png" alt="" class="logo-site"></a>
+						</div>
+			
+						<div class="col-4">
+							<div class="footer__contact">
+								<a href="tel:+78005005059" class="footer__phone">8-800-500-50-59</a>
+								<div class="header__address">г. Москва, ул. Скобелева, 15</div>
+							</div>
+						</div>
+			
+						<div class="col-4">
+							<div class="footer__copyright-wrap">
+								<a href="#" class="footer__polit">Пользовательское соглашение</a>
+								<div class="footer__copyright">ServiceLot 2018 © Все права защищены</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+
+		<script src="js/jquery-3.4.1.min.js"></script>
+		<script src="js/vendor/chosen/chosen.jquery.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>

@@ -1,0 +1,135 @@
+﻿html,
+body{
+	background: #fff;
+	font-family: $font-site;
+	@include font(normal, normal, 16px, 26px, $color-text);
+	box-sizing:border-box;
+	letter-spacing: 0.2px;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+img{
+	max-width: 100%;
+}
+
+a{
+	color: $color-green;
+	text-decoration: none;
+}
+
+a:hover,
+a:active,
+a:focus{
+	color: #1f8a2e;
+}
+
+p{
+	@include font(normal, normal, 16px, 26px, $color-text);
+	padding: 5px 0;
+}
+
+h1,
+.h1{
+	@include font(normal, bold, 30px, 30px, $color-text);
+	margin-bottom: 10px;
+}
+
+h2,
+.h2{
+	@include font(normal, bold, 24px, 30px, $color-text);
+	margin-bottom: 10px;
+}
+
+h3,
+.h3{
+	@include font(normal, normal, 24px, 30px, $color-text);
+	margin-bottom: 0;
+}
+
+h4,
+.h4{
+	@include font(normal, normal, 21px, 25px, $color-text);
+	margin-bottom: 0;
+}
+
+h5,
+.h5{
+	@include font(normal, normal, 18px, 22px, $color-text);
+	margin-bottom: 0;
+}
+
+h6,
+.h6{
+	@include font(normal, normal, 16px, 20px, $color-text);
+	margin-bottom: 0;
+}
+
+.wrapper{
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	width: 100%;
+	max-width: 1920px;
+	margin: 0 auto;
+}
+
+main{
+	flex: 1;
+	padding-top: 50px;
+	padding-bottom: 80px;
+}
+
+.btn,
+input[type="submit"].btn{
+	display: inline-block;
+	height: 44px;
+	background-color: #333333;
+	border: 0;
+	outline: 0;
+	@include font(normal, 600, 15px, 43px, #fff);
+	text-transform: uppercase;
+	padding: 0 20px;
+	text-align: center;
+	cursor: pointer;
+	text-decoration: none;
+	box-shadow: 0px 5px 20px 0px rgba(0,0,0,0.2);
+	border-radius: 10px;
+	min-width: 132px;
+	position: relative;
+}
+
+.btn:hover,
+input[type="submit"].btn:hover{
+	background-color: #111111;
+	color: #fff;
+}
+
+.btn--search,
+input[type="submit"].btn--search{
+	background-image: url(#{$path-img}/ic-search.png);
+	background-repeat: no-repeat;
+	background-position: 28px center;
+	padding-left: 34px;
+}
+
+.code{
+	background-color: #f7f7f7;
+	border: 1px solid #e1e1e8;
+	color: #d14;
+	padding: 1px 4px;
+	display: inline-block;
+	font-family: monospace, arial;
+	border-radius: 3px;
+}
+
+.h-text-left{text-align: left !important;}
+.h-text-center{text-align: center !important;}
+.h-text-right{text-align: right !important;}
+.h-text-justify{text-align: justify !important;}
+.h-text-uppercase{text-transform: uppercase !important;}
+.h-text-bold {font-weight: 700 !important;}

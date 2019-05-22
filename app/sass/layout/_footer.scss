@@ -1,0 +1,29 @@
+/*-------------- Footer -----------------*/
+.footer{
+	background: #f7f7f7;
+	@include font(normal, normal, 16px, 26px, $color-text);
+	padding: 30px 0 25px;
+
+	&__contact{
+		text-align: center;
+	}
+
+	&__phone{
+		@include font(normal, 600, 18px, 26px, $color-text);
+	}
+	
+
+	&__address{
+		@include font(normal, normal, 16px, 26px, $color-text);
+	}
+
+	&__copyright-wrap{
+		display: table;
+		margin-left: auto;
+		margin-right: 0;
+	}
+
+	&__polit{
+		color: $color-text;
+	}
+}

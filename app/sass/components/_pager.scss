@@ -1,0 +1,36 @@
+﻿/*----------- pager -------------*/
+.pager{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+
+	&__item{
+		display: inline-block;
+		width: 32px;
+		height: 32px;
+		border-radius: 50%;
+		@include font(normal, normal, 16px, 30px, $color-text);
+		text-align: center;
+		margin: 0 3px;
+	}
+
+	&__item.current{
+		background: $color-green;
+		color: #fff;
+	}
+
+	&__prev,
+	&__next{
+		display: inline-block;
+		width: 21px;
+		height: 14px;
+		background-image: url(#{$path-img}/sprite.png);
+		background-repeat: no-repeat;
+	}
+
+	&__prev{background-position: -5px -30px; margin-right: 10px;}
+	&__next{background-position: -35px -30px; margin-left: 10px;}
+	&__prev:hover{background-position: -5px -55px;}
+	&__next:hover{background-position: -35px -55px;}
+}

@@ -1,0 +1,100 @@
+/*-------------- chosen -----------------*/
+.chosen-container{
+	min-width: 200px;
+	text-align: left;
+}
+
+.chosen-search{
+	display: none!important;
+}
+
+.chosen-container-single .chosen-single{
+	display: block;
+	box-shadow: none;
+	outline: 0;
+	background: $color-grey;
+	height: 44px;
+	border: 0;
+	border-radius: 10px;
+	@include font(normal, normal, 16px, 43px, $color-text);
+	padding: 0 25px;
+}
+
+.chosen-container-single .chosen-single span{
+	margin-right: 8px;
+}
+
+.chosen-container-single .chosen-single.chosen-default{
+	color: #555555;
+}
+
+.chosen-container-single .chosen-single div{
+	right: 17px;
+}
+
+.chosen-container-single .chosen-single div b{
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 6px 6px 0 6px;
+	border-color: #555555 transparent transparent transparent;
+	margin-bottom: 3px;
+}
+
+.chosen-container-active.chosen-with-drop .chosen-single div b{
+	border-width: 0 6px 6px 6px;
+	border-color: transparent transparent #555555 transparent;
+}
+
+.chosen-container .chosen-results{
+	margin: 0;
+	padding: 12px 0px;
+}
+
+.chosen-container .chosen-results li{
+	padding: 10px 25px;
+	@include font(normal, normal, 16px, 20px, $color-text);
+}
+
+.chosen-container .chosen-results li.highlighted,
+.chosen-container .chosen-results li.result-selected{
+	background: #dddddd;
+	color: $color-text;
+}
+
+.chosen-container-active.chosen-with-drop .chosen-single{
+	box-shadow: none;
+	border: 0;
+	background: $color-grey;
+	border-radius: 10px;
+}
+
+.chosen-container .chosen-drop{
+	background: #f1f1f1;
+	border: 0;
+	box-shadow: none;
+	border-radius: 10px;
+	margin-top: 1px;
+	overflow: hidden;
+}
+
+.select-green{
+	.chosen-container-active.chosen-with-drop .chosen-single,
+	.chosen-container-single .chosen-single{
+		background: $color-green;
+	}
+
+	.chosen-container-single .chosen-single span{
+		color: #fff;
+	}
+	
+	.chosen-container-single .chosen-single div b{
+		border-color: #fff transparent transparent transparent;
+	}
+
+	.chosen-container-active.chosen-with-drop .chosen-single div b{
+		border-color: transparent transparent #fff transparent;
+	}
+
+}

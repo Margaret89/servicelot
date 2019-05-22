@@ -1,0 +1,29 @@
+﻿/*----------- catalog-list -------------*/
+.catalog-list{
+	&__item{
+		display: block;
+		margin-bottom: 50px;
+		padding: 30px 25px 27px;
+		box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.1);
+		text-align: center;
+	}
+
+	&__img{
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+		height: 200px;
+		width: 100%;
+		margin-bottom: 20px;
+	}
+
+	&__name{
+		@include font(normal, 600, 16px, 24px, $color-text);
+		letter-spacing: 0.4px;
+	}
+
+	&__price{
+		@include font(normal, 600, 18px, 24px, #24a035);
+		margin-top: 6px;
+	}
+}

@@ -1,0 +1,49 @@
+﻿/*----------- form-site -------------*/
+.form-site{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 75px;
+
+	input[type="text"],
+	input[type="email"],
+	textarea{
+		height: 44px;
+		width: 326px;
+		outline: 0;
+		border: 0;
+		border-radius: 10px;
+		background: #eeeeee;
+		@include font(normal, normal, 16px, 43px, $color-text);
+		padding: 0 25px;
+	}
+
+	.chosen-container,
+	select{
+		width: 326px;
+	}
+
+	textarea{
+		height: 150px;
+	}
+
+	input[type="text"]::placeholder,
+	input[type="email"]::placeholder,
+	textarea::placeholder{
+		color: #555555;
+	}
+
+	input[type="text"].errorfield,
+	input[type="email"].errorfield,
+	textarea.errorfield,
+	.chosen-single.errorfield{
+		border-color:#eb3528;
+		animation: errorfield 300ms 3 alternate;
+		-webkit-animation: errorfield 300ms 3 alternate;
+	}
+}
+
+@keyframes errorfield{
+	from {border-color: #c4c4c4;}
+	to {	border-color: #eb3528;}
+}
