@@ -11,7 +11,7 @@
 		height: 44px;
 		width: 326px;
 		outline: 0;
-		border: 0;
+		border: 1px solid #eeeeee;
 		border-radius: 10px;
 		background: #eeeeee;
 		@include font(normal, normal, 16px, 43px, $color-text);
@@ -24,7 +24,7 @@
 	}
 
 	textarea{
-		height: 150px;
+		height: 195px;
 	}
 
 	input[type="text"]::placeholder,
@@ -40,6 +40,71 @@
 		border-color:#eb3528;
 		animation: errorfield 300ms 3 alternate;
 		-webkit-animation: errorfield 300ms 3 alternate;
+	}
+
+	&__polit{
+		margin-top: 15px;
+	}
+
+	&--column{
+		display: block;
+	}
+
+	&--column input[type="text"],
+	&--column input[type="email"]{
+		margin-bottom: 20px;
+	}
+
+	&--column input[type="text"],
+	&--column input[type="email"],
+	&--column textarea{
+		width: 100%;
+	}
+
+	&--column  input[type="submit"].btn{
+		margin: 0 auto;
+		display: inherit;
+		margin-top: 50px;
+		min-width: 235px;
+	}
+}
+
+.file-upload{
+	display: flex;
+	align-items: center;
+	background: $color-grey;
+	border-radius: 10px;
+	cursor: pointer;
+
+	input[type="file"]{
+		display: none;
+	}
+
+	&__btn,
+	&__name{
+		padding: 0 20px;
+		height: 44px;
+		border-radius: 10px;
+		@include font(normal, normal, 16px, 42px, #555);
+	}
+
+	&__btn{
+		width: 166px;
+		text-align: center;
+		color: #fff;
+		background: $color-green;
+	}
+
+	&__name{
+		width: calc(100% - 166px);
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		letter-spacing: 0.05px;
+	}
+
+	&:hover &__btn{
+		background: #168d27;
 	}
 }
 

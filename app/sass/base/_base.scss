@@ -30,13 +30,17 @@ a:focus{
 
 p{
 	@include font(normal, normal, 16px, 26px, $color-text);
-	padding: 5px 0;
+	letter-spacing: 0.15px;
+	padding: 7px 0;
+	margin-bottom: 0;
 }
 
 h1,
 .h1{
 	@include font(normal, bold, 30px, 30px, $color-text);
-	margin-bottom: 10px;
+	letter-spacing: 0.75px;
+	margin-bottom: 7px;
+	margin-top: -6px;
 }
 
 h2,
@@ -117,6 +121,14 @@ input[type="submit"].btn--search{
 	padding-left: 34px;
 }
 
+.btn--mail,
+input[type="submit"].btn--mail{
+	background-image: url(#{$path-img}/ic-mail.png);
+	background-repeat: no-repeat;
+	background-position: 28px center;
+	padding-left: 43px;
+}
+
 .code{
 	background-color: #f7f7f7;
 	border: 1px solid #e1e1e8;
@@ -133,3 +145,57 @@ input[type="submit"].btn--search{
 .h-text-justify{text-align: justify !important;}
 .h-text-uppercase{text-transform: uppercase !important;}
 .h-text-bold {font-weight: 700 !important;}
+
+.notice{
+	@include font(normal, 600, 18px, 24px, #666666);
+	margin-bottom: 23px;
+}
+
+.input-check{
+	&__label{
+		display: inline-block;
+		vertical-align: top;
+		cursor: pointer;
+		position: relative;
+		padding-left: 28px;
+		@include font(normal, normal, 16px, 22px, #555555);
+		letter-spacing: 0.15px;
+	}
+
+	input[type=checkbox] {
+		display: none;
+	}
+
+	&__mark{
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+		border: 0;
+		background: $color-grey;
+		position: absolute;
+		left: 0;
+		top: 1px;
+		border-radius: 2px;
+	}
+
+	input[type=checkbox]:checked + &__label &__mark{
+		background: $color-green;
+	}
+
+	input[type=checkbox]:checked + &__label &__mark:after{
+		content: "";
+		display: inline-block;
+		width: 12px;
+		height: 10px;
+		background: url(#{$path-img}/sprite.png) no-repeat -5px  -80px;
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		@include top-center;
+	}
+}
+
+.online-mark{
+	margin-top: 30px;
+}

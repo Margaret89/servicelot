@@ -90,7 +90,9 @@ p {
   font-size: 16px;
   line-height: 26px;
   color: #222;
-  padding: 5px 0;
+  letter-spacing: 0.15px;
+  padding: 7px 0;
+  margin-bottom: 0;
 }
 
 h1,
@@ -100,7 +102,9 @@ h1,
   font-size: 30px;
   line-height: 30px;
   color: #222;
-  margin-bottom: 10px;
+  letter-spacing: 0.75px;
+  margin-bottom: 7px;
+  margin-top: -6px;
 }
 
 h2,
@@ -213,6 +217,14 @@ input[type="submit"].btn--search {
   padding-left: 34px;
 }
 
+.btn--mail,
+input[type="submit"].btn--mail {
+  background-image: url(../img/ic-mail.png);
+  background-repeat: no-repeat;
+  background-position: 28px center;
+  padding-left: 43px;
+}
+
 .code {
   background-color: #f7f7f7;
   border: 1px solid #e1e1e8;
@@ -245,6 +257,69 @@ input[type="submit"].btn--search {
 
 .h-text-bold {
   font-weight: 700 !important;
+}
+
+.notice {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  color: #666666;
+  margin-bottom: 23px;
+}
+
+.input-check__label {
+  display: inline-block;
+  vertical-align: top;
+  cursor: pointer;
+  position: relative;
+  padding-left: 28px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #555555;
+  letter-spacing: 0.15px;
+}
+
+.input-check input[type=checkbox] {
+  display: none;
+}
+
+.input-check__mark {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 0;
+  background: #eeeeee;
+  position: absolute;
+  left: 0;
+  top: 1px;
+  border-radius: 2px;
+}
+
+input[type=checkbox]:checked + .input-check__label .input-check__mark {
+  background: #25a537;
+}
+
+input[type=checkbox]:checked + .input-check__label .input-check__mark:after {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 10px;
+  background: url(../img/sprite.png) no-repeat -5px -80px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.online-mark {
+  margin-top: 30px;
 }
 
 /*-------------- Header -----------------*/
@@ -436,7 +511,7 @@ input[type="submit"].btn--search {
   outline: 0;
   background: #eeeeee;
   height: 44px;
-  border: 0;
+  border: 1px solid #eeeeee;
   border-radius: 10px;
   font-style: normal;
   font-weight: normal;
@@ -496,7 +571,7 @@ input[type="submit"].btn--search {
 .chosen-container-active.chosen-with-drop .chosen-single {
   -webkit-box-shadow: none;
   box-shadow: none;
-  border: 0;
+  border: 1px solid #eeeeee;
   background: #eeeeee;
   border-radius: 10px;
 }
@@ -548,7 +623,7 @@ input[type="submit"].btn--search {
   height: 44px;
   width: 326px;
   outline: 0;
-  border: 0;
+  border: 1px solid #eeeeee;
   border-radius: 10px;
   background: #eeeeee;
   font-style: normal;
@@ -565,7 +640,7 @@ input[type="submit"].btn--search {
 }
 
 .form-site textarea {
-  height: 150px;
+  height: 195px;
 }
 
 .form-site input[type="text"]::-webkit-input-placeholder,
@@ -605,6 +680,79 @@ input[type="submit"].btn--search {
   border-color: #eb3528;
   animation: errorfield 300ms 3 alternate;
   -webkit-animation: errorfield 300ms 3 alternate;
+}
+
+.form-site__polit {
+  margin-top: 15px;
+}
+
+.form-site--column {
+  display: block;
+}
+
+.form-site--column input[type="text"],
+.form-site--column input[type="email"] {
+  margin-bottom: 20px;
+}
+
+.form-site--column input[type="text"],
+.form-site--column input[type="email"],
+.form-site--column textarea {
+  width: 100%;
+}
+
+.form-site--column input[type="submit"].btn {
+  margin: 0 auto;
+  display: inherit;
+  margin-top: 50px;
+  min-width: 235px;
+}
+
+.file-upload {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: #eeeeee;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.file-upload input[type="file"] {
+  display: none;
+}
+
+.file-upload__btn, .file-upload__name {
+  padding: 0 20px;
+  height: 44px;
+  border-radius: 10px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 42px;
+  color: #555;
+}
+
+.file-upload__btn {
+  width: 166px;
+  text-align: center;
+  color: #fff;
+  background: #25a537;
+}
+
+.file-upload__name {
+  width: calc(100% - 166px);
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  letter-spacing: 0.05px;
+}
+
+.file-upload:hover .file-upload__btn {
+  background: #168d27;
 }
 
 @-webkit-keyframes errorfield {
@@ -720,4 +868,47 @@ input[type="submit"].btn--search {
 
 .pager__next:hover {
   background-position: -35px -55px;
+}
+
+/*----------- contacts -------------*/
+.contacts {
+  margin-top: 30px;
+}
+
+.contacts__item {
+  padding-left: 23px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.contacts__item::before {
+  content: '';
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background: #25a537;
+  position: absolute;
+  top: 6px;
+  left: 0;
+}
+
+.contacts__title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+  color: #222;
+}
+
+.contacts__text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 25px;
+  color: #222;
+}
+
+.map {
+  width: 100%;
+  height: 336px;
 }

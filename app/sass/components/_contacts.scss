@@ -1,0 +1,35 @@
+﻿/*----------- contacts -------------*/
+.contacts{
+	margin-top: 30px;
+
+	&__item{
+		padding-left: 23px;
+		position: relative;
+		margin-bottom: 20px;
+	}
+
+	&__item::before{
+		content: '';
+		display: inline-block;
+		width: 14px;
+		height: 14px;
+		background: $color-green;
+		position: absolute;
+		top: 6px;
+		left: 0;
+	}
+
+	&__title{
+		@include font(normal, bold, 18px, 26px, $color-text);
+	}
+
+	&__text{
+		@include font(normal, normal, 16px, 25px, $color-text);
+	}
+}
+
+
+.map{
+	width: 100%;
+	height: 336px;
+}

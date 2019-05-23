@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href="css/bootstrap-reboot.css">
 		<link rel="stylesheet" href="css/bootstrap-grid.css">
 		<link rel="stylesheet" href="js/vendor/chosen/chosen.min.css">
+		<link rel="stylesheet" href="js/vendor/slick-slider/slick.css">
 		<link rel="stylesheet" href="css/main.css">
 	</head>
 
@@ -92,10 +93,10 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-12">
-							<form method="get" class="form-site">
-								<input type="text" placeholder="Поиск лота">
+							<form method="get" class="form-site js-valid-form">
+								<input type="text" placeholder="Поиск лота" data-required="true" required="required">
 			
-								<select data-placeholder="Категория" class="js-select" class="select-green">
+								<select data-placeholder="Категория" class="js-select" class="select-green" required="required">
 									<option value=""></option>
 									<option value="Бытовая техника">Бытовая техника</option>
 									<option value="Серебро">Серебро</option>
@@ -150,6 +151,14 @@
 							<p class="h4">Это класс с названием h4</p>
 							<p class="h5">Это класс с названием h5</p>
 							<p class="h6">Это класс с названием h6</p>
+							
+							<br>
+							<br>
+							<div class="h1">Нестандартный checkbox</div>
+							<div class="input-check">
+								<input type="checkbox" id="checkbox1">
+								<label for="checkbox1" class="input-check__label"><span class="input-check__mark"></span>Самовывоз</label>
+							</div>
 
 							<br>
 							<br>
@@ -206,6 +215,7 @@
 
 		<script src="js/jquery-3.4.1.min.js"></script>
 		<script src="js/vendor/chosen/chosen.jquery.min.js"></script>
+		<script src="js/vendor/slick-slider/slick.min.js"></script>
 		<script src="js/main.js"></script>
 	</body>
 </html>

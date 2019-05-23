@@ -14,7 +14,7 @@
 	outline: 0;
 	background: $color-grey;
 	height: 44px;
-	border: 0;
+	border: 1px solid $color-grey;
 	border-radius: 10px;
 	@include font(normal, normal, 16px, 43px, $color-text);
 	padding: 0 25px;
@@ -65,7 +65,7 @@
 
 .chosen-container-active.chosen-with-drop .chosen-single{
 	box-shadow: none;
-	border: 0;
+	border: 1px solid $color-grey;
 	background: $color-grey;
 	border-radius: 10px;
 }

@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Главная страница</title>
+		<title>Онлайн оценка</title>
 		<link rel="stylesheet" href="css/bootstrap-reboot.css">
 		<link rel="stylesheet" href="css/bootstrap-grid.css">
 		<link rel="stylesheet" href="js/vendor/chosen/chosen.min.css">
@@ -114,18 +114,51 @@
 						</div>
 					</div>
 				</div>
-			<div class="container">
-				<div class="row">
-					<div class="col-12">
-						<p><a href="main.html">Главная страница</a></p>
-						<p><a href="sale.html">Как осуществляется комиссионная продажа на ServiceLoT.ru</a></p>
-						<p><a href="auction.html">Как проходят торги на ServiceLoT.ru</a></p>
-						<p><a href="contacts.html">Контакты</a></p>
-						<p><a href="online-mark.html">Онлайн оценка</a></p>
-						<p><a href="index.html">Типографика</a></p>
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<h1>Онлайн оценка</h1>
+						</div>
 					</div>
 				</div>
-			</div>
+
+				<section class="online-mark">
+					<form method="get" class="form-site form-site--column js-valid-form">
+						<div class="container">
+							<div class="row">
+								<div class="col-4">
+									<input type="text" placeholder="Ваше имя">
+									<input type="email" placeholder="Email">
+									<input type="text" placeholder="Номер телефона">
+
+									<label class="file-upload">
+										<input type="file" name="file" class="js-input-file">
+										<span class="file-upload__btn">Выберите файл</span>
+										<span class="file-upload__name js-name-file">Файл не выбран</span>
+									</label>
+									<!-- <input type="file" placeholder="Выберите файл"> -->
+								</div>
+
+								<div class="col-8">
+									<textarea placeholder="Описание лота"></textarea>
+
+									<div class="form-site__polit">
+										<div class="input-check">
+											<input type="checkbox" id="checkbox1">
+											<label for="checkbox1" class="input-check__label"><span class="input-check__mark"></span>Отправляя заявку на оценку, я выражаю согласие на <a href="#">обработку своих персональных данных</a></label>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-12">
+									<input type="submit" value="Отправить заявку" class="btn btn--mail">
+								</div>
+							</div>
+						</div>
+					</form>
+				</section>
 			</main>
 			
 			<footer class="footer">
