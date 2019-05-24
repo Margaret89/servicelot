@@ -88,6 +88,36 @@ $(document).ready(function () {
 		$(".js-name-file").attr("title", f_name)
 	});
 
+	// Слайдер карточки товаров
+	 $('.js-product-slide-img').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: false,
+		arrows: false,
+		vertical: true,
+		focusOnSelect: true,
+		asNavFor: '.js-product-slide-thumb',
+		// responsive: [
+		// 	{
+		// 		breakpoint: 768,
+		// 		settings: {
+		// 			dots: true,
+		// 			vertical: false,
+		// 		}
+		// 	},
+		// ]
+	});
+
+	$('.js-product-slide-thumb').slick({
+		slidesToShow: 5,
+		slidesToScroll: 1,
+		asNavFor: '.js-product-slide-img',
+		dots: false,
+		arrows: true,
+		vertical: true,
+		focusOnSelect: true,
+	});
+
 
 	// //---------- Маска для телефона -------------
 	// $.mask.definitions['~'] = "[+-]";
