@@ -11,14 +11,32 @@ $(document).ready(function () {
 		$btnSubmit.click(function(event){
 			var flag=false;
 			var $curForm = $(this).parents('.js-valid-form');
+			var inputR = $(this).find('input[data-required="true"]');
+			var pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,6}\.)?[a-z]{2,6}$/i;
 
-			$('input[data-required="true"]').each(function(e){
+			$curForm.find('input[data-required="true"]').each(function(e){
 				showErrorField($(this));
 			});
 
-			$('textarea[data-required="true"]').each(function(e){
+			$curForm.find('textarea[data-required="true"]').each(function(e){
 				showErrorField($(this));
 			});
+
+			$curForm.find('input[type="email"]').each(function(e){
+				var $emailField = $(this);
+
+				console.log($emailField.data('required'));
+
+				if ($emailField.val() != '') {
+					if($emailField.val().search(pattern) == 0){
+						$emailField.removeClass('errorfield');
+					}else{
+						$emailField.addClass('errorfield');
+						flag='true';
+					}
+				}
+			});
+
 
 			function showErrorField(field) {
 				var valField = field.val();
@@ -119,9 +137,15 @@ $(document).ready(function () {
 	});
 
 
-	// //---------- Маска для телефона -------------
-	// $.mask.definitions['~'] = "[+-]";
-	// $("#phone").mask("(999) 999-9999");
+	//---------- Маска для телефона -------------
+	$.mask.definitions['~'] = "[+-]";
+	$(".js-phone").mask("+7 (999) 999-99-99");
+
+	// Ввод имени с загловной русскими буквами
+	$('.js-name').keyup(function(){
+		this.value = this.value[0].toUpperCase() + this.value.slice(1);
+		this.value = this.value.replace(/[^а-яА-ЯёЁ0-9 -]/ig,'');
+	});
 
 	// // Вызов функции подгрузки изображений
 	// loadBigImg();

@@ -12,6 +12,7 @@
 		width: 326px;
 		outline: 0;
 		border: 1px solid #eeeeee;
+		box-shadow: none;
 		border-radius: 10px;
 		background: #eeeeee;
 		@include font(normal, normal, 16px, 43px, $color-text);

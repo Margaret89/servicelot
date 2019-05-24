@@ -17,28 +17,27 @@
 				</div>
 
 				<section class="online-mark">
-					<form method="get" class="form-site form-site--column js-valid-form">
+					<form method="get" class="form-site form-site--column hhhs js-valid-form">
 						<div class="container">
 							<div class="row">
 								<div class="col-4">
-									<input type="text" placeholder="Ваше имя">
-									<input type="email" placeholder="Email">
-									<input type="text" placeholder="Номер телефона">
+									<input type="text" placeholder="Ваше имя" class="js-name" data-required="true" title = "Введите имя русскими буквами">
+									<input type="email" placeholder="Email" data-required="true">
+									<input type="text" placeholder="Номер телефона" class="js-phone" data-required="true">
 
 									<label class="file-upload">
 										<input type="file" name="file" class="js-input-file">
 										<span class="file-upload__btn">Выберите файл</span>
 										<span class="file-upload__name js-name-file">Файл не выбран</span>
 									</label>
-									<!-- <input type="file" placeholder="Выберите файл"> -->
 								</div>
 
 								<div class="col-8">
-									<textarea placeholder="Описание лота"></textarea>
+									<textarea placeholder="Описание лота" data-required="true"></textarea>
 
 									<div class="form-site__polit">
 										<div class="input-check">
-											<input type="checkbox" id="checkbox1">
+											<input type="checkbox" id="checkbox1" checked="checked">
 											<label for="checkbox1" class="input-check__label"><span class="input-check__mark"></span>Отправляя заявку на оценку, я выражаю согласие на <a href="#">обработку своих персональных данных</a></label>
 										</div>
 									</div>
