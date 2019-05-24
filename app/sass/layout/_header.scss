@@ -104,3 +104,58 @@
 		background-position: -30px -5px;
 	}
 }
+
+@media (max-width: 991px) {
+	.header-menu{
+		&__item{
+			display: block;
+			text-align: center;
+			position: relative;
+		}
+
+		&__content{
+			width: 100%;
+			padding-left: 0;
+			margin-top: 20px;
+		}
+
+		&__arr{
+			position: absolute;
+			top: 44px;
+			right: 15px;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.header{
+		&__top{
+			text-align: center;
+			padding: 10px 0 15px;
+		}
+
+		&__city{
+			text-align: center;
+		}
+
+		&__contact{
+			margin: 10px 0;
+		}
+	}
+
+	.logo-site{
+		width: 185px;
+	}
+
+	.header-menu{
+		padding: 25px 0 40px;
+
+		&__item{
+			padding: 15px 18px;
+		}
+
+		&__arr{
+			@include top-center;
+		}
+	}
+}

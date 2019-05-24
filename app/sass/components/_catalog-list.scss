@@ -27,3 +27,11 @@
 		margin-top: 6px;
 	}
 }
+
+@media (max-width: 767px) {
+	.catalog-list{
+		&__item{
+			margin-bottom: 30px;
+		}
+	}
+}

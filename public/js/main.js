@@ -115,15 +115,14 @@ $(document).ready(function () {
 		vertical: true,
 		focusOnSelect: true,
 		asNavFor: '.js-product-slide-thumb',
-		// responsive: [
-		// 	{
-		// 		breakpoint: 768,
-		// 		settings: {
-		// 			dots: true,
-		// 			vertical: false,
-		// 		}
-		// 	},
-		// ]
+		responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+					vertical: false,
+				}
+			},
+		]
 	});
 
 	$('.js-product-slide-thumb').slick({
@@ -134,6 +133,28 @@ $(document).ready(function () {
 		arrows: true,
 		vertical: true,
 		focusOnSelect: true,
+		responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+					vertical: false,
+				}
+			},
+			{
+				breakpoint: 520,
+				settings: {
+					vertical: false,
+					slidesToShow: 4,
+				}
+			},
+			{
+				breakpoint: 420,
+				settings: {
+					vertical: false,
+					slidesToShow: 3,
+				}
+			},
+		]
 	});
 
 
@@ -146,31 +167,4 @@ $(document).ready(function () {
 		this.value = this.value[0].toUpperCase() + this.value.slice(1);
 		this.value = this.value.replace(/[^а-яА-ЯёЁ0-9 -]/ig,'');
 	});
-
-	// // Вызов функции подгрузки изображений
-	// loadBigImg();
-	// loadBigBacground();
-
-	// // Вызов функции прижатия футера к низу экрана
-	// footerBind('.js-main','.js-header,.js-footer');
-	// $(window).on('resize',function(){footerBind('.js-main','.js-header,.js-footer')});
 });
-
-// // Загрузка больших изображений
-// function loadBigImg() {
-// 	var $imgDefer = $('[data-src]');
-
-// 	$imgDefer.each(function(indx, element){
-// 		var urlImgBig = $(this).attr("data-src");
-// 		$(this).attr("src", urlImgBig);
-// 	});
-// }
-
-// function loadBigBacground() {
-// 	var $imgDefer = $('[data-background]');
-
-// 	$imgDefer.each(function(indx, element){
-// 		var urlBackgroundBig = $(this).attr("data-background");
-// 		$(this).css("background-image", "url("+ urlBackgroundBig +")");
-// 	});
-// }

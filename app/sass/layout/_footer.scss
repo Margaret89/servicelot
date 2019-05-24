@@ -27,3 +27,17 @@
 		color: $color-text;
 	}
 }
+
+@media (max-width: 767px) {
+	.footer{
+		text-align: center;
+
+		&__copyright-wrap{
+			display: inline-block;
+		}
+
+		&__contact{
+			margin: 15px 0;
+		}
+	}
+}

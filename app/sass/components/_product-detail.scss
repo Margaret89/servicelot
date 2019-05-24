@@ -23,3 +23,15 @@
 		font-weight: bold;
 	}
 }
+
+@media (max-width: 1199px) {
+	.product-info{
+		margin-left: 0;
+	}
+}
+
+@media (max-width: 991px) {
+	.product-info{
+		margin-top: 50px;
+	}
+}

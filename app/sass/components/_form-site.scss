@@ -21,7 +21,7 @@
 
 	.chosen-container,
 	select{
-		width: 326px;
+		width: 326px!important;
 	}
 
 	textarea{
@@ -49,6 +49,7 @@
 
 	&--column{
 		display: block;
+		margin-bottom: 0;
 	}
 
 	&--column input[type="text"],
@@ -112,4 +113,89 @@
 @keyframes errorfield{
 	from {border-color: #c4c4c4;}
 	to {	border-color: #eb3528;}
+}
+
+@media (max-width: 1199px) {
+	.form-site{
+		input[type="text"],
+		input[type="email"],
+		textarea,
+		select{
+			width: 256px;
+		}
+
+		.chosen-container{
+			width: 256px!important;
+		}
+
+		&--column input[type="text"],
+		&--column input[type="email"],
+		&--column textarea,
+		&--column select,
+		&--column textarea{
+			width: 100%;
+		}
+	}
+}
+
+@media (max-width: 991px) {
+	.form-site{
+		input[type="text"],
+		input[type="email"],
+		textarea,
+		select{
+			width: 185px;
+		}
+
+		.chosen-container{
+			width: 185px!important;
+		}
+
+		input[type="text"],
+		input[type="email"],
+		textarea,
+		.chosen-container-single .chosen-single{
+			padding: 0 10px;
+		}
+
+		&--column input[type="text"],
+		&--column input[type="email"],
+		&--column textarea,
+		&--column select,
+		&--column textarea{
+			width: 100%;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.form-site{
+		display: block;
+		margin-bottom: 50px;
+
+		input[type="text"],
+		input[type="email"],
+		textarea,
+		.chosen-container,
+		select{
+			width: 100%;
+			margin-bottom: 15px;
+		}
+
+		.chosen-container{
+			width: 100%!important;
+		}
+
+		input[type="submit"]{
+			width: 100%;
+		}
+
+		&--column{
+			margin-bottom: 0;
+		}
+
+		&--column input[type="submit"].btn{
+			margin-top: 30px;
+		}
+	}
 }
